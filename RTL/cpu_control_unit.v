@@ -162,7 +162,9 @@ module control_unit #
               apb_en      = 1'b0;
               apb_wr      = 1'b0;
             end
-          NOT_I:
+          NOT_I,
+          SR_I,
+          SL_I:
             begin
               cu_nstate   = CU_PHASE_2;
               pc_ld       = 1'b0;
@@ -348,7 +350,9 @@ module control_unit #
               apb_en      = 1'b0;
               apb_wr      = 1'b0;
             end
-          NOT_I:
+          NOT_I,
+          SR_I,
+          SL_I:
             begin
               cu_nstate   = CU_PHASE_1;
               pc_ld       = 1'b0;

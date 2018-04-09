@@ -1,6 +1,6 @@
 module plc_top #
 (
-  parameter [15:0] GPI_W      = 16,      // GPI width
+  parameter [15:0] GPI_W      = 12,      // GPI width
   parameter [15:0] GPO_W      = 16,      // GPO width
   parameter [15:0] DM_ADDR_W  = 8,       // Data Memory address width
   parameter [15:0] PM_ADDR_W  = 10,      // Program Memory address width

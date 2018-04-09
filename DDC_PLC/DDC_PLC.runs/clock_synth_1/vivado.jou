@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Apr  4 08:35:45 2018
+# Process ID: 12012
+# Current directory: Z:/PLC/plc/DDC_PLC/DDC_PLC.runs/clock_synth_1
+# Command line: vivado.exe -log clock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clock.tcl
+# Log file: Z:/PLC/plc/DDC_PLC/DDC_PLC.runs/clock_synth_1/clock.vds
+# Journal file: Z:/PLC/plc/DDC_PLC/DDC_PLC.runs/clock_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clock.tcl -notrace

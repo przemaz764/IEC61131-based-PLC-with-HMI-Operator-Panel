@@ -27,3 +27,5 @@ localparam JMPC_I   = 8'b0000_1101;
 localparam JMPCN_I  = 8'b0001_1101;
 localparam APB_RD_I = 8'b0000_1110;
 localparam APB_WR_I = 8'b0001_1110;
+localparam SR_I     = 8'b0000_1111;
+localparam SL_I     = 8'b0001_1111;

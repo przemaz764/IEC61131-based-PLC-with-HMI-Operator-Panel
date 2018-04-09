@@ -373,7 +373,7 @@ module regs #
   begin: g_data_memory
   for (i = 0; i < 4; i = i + 1)
     begin: i_data_memory
-      dual_port_ram #
+      /*dual_port_ram #
       (
         .DM_ADDR_W(DM_ADDR_W)
       )
@@ -390,6 +390,22 @@ module regs #
         .in_byte(dm_in[8*(i+1)-1:8*i]), 
         .out_bit(dm_out_bit[i]), 
         .out_byte(dm_out_byte[i])
+      );*/
+      blk_mem_gen_0
+      i_dual_port_ram
+      (
+        .clka   (cpu_clk),
+        .ena    (dm_en_bit[i]),
+        .wea    (dm_wr_bit[i]),
+        .addra  ({dm_addr[DM_ADDR_W-1:5], dm_addr[2:0]}),
+        .dina   (dm_in[0]),
+        .douta  (dm_out_bit[i]),
+        .clkb   (cpu_clk),
+        .enb    (dm_en_byte[i]),
+        .web    (dm_wr_byte[i]),
+        .addrb  (dm_addr[DM_ADDR_W-1:5]),
+        .dinb   (dm_in[8*(i+1)-1:8*i]),
+        .doutb  (dm_out_byte[i])
       );
     end
   end // g_data_memory

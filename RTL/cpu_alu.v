@@ -53,6 +53,16 @@ module alu #
           alu_out_cr = pm_const;
           alu_out_dm = 32'd0;
         end
+      SR_I:
+        begin
+          alu_out_cr = {cr_out[0], cr_out[31:1]};
+          alu_out_dm = 32'd0;
+        end
+      SL_I:
+        begin
+          alu_out_cr = {cr_out[30:0], cr_out[31]};
+          alu_out_dm = 32'd0;
+        end
       AND_I:
         begin
           alu_out_cr = cr_out & dm_out;
@@ -167,4 +177,3 @@ module alu #
   end
 
 endmodule
-  
