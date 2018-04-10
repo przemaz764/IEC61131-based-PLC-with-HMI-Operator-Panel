@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import java.lang.String?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60"
+			xmlns:fx="http://javafx.com/fxml/1"
+			fx:controller="com.controllers.RootLayout"
+			fx:id="rootLayout">
+
+	<center>
+		<HBox fx:id="startView" spacing="10" alignment="CENTER">
+			<padding>
+				<Insets left="10" right="10" top="10" bottom="10"/>
+			</padding>
+			<VBox spacing="20" alignment="CENTER_LEFT">
+				<ListView fx:id="pathList" HBox.hgrow="ALWAYS"/>
+				<ChoiceBox prefWidth="200" fx:id="visualizationChooser">
+					<String fx:value="Gantry"/>
+					<String fx:value="Elevator"/>
+				</ChoiceBox>
+			</VBox>
+			<VBox spacing="15" alignment="CENTER_RIGHT">
+				<Button onAction="#setTextLayout" prefWidth="80" prefHeight="80">
+					<tooltip>
+						<Tooltip text="Create new project"/>
+					</tooltip>
+					<graphic>
+						<ImageView fitHeight="60" fitWidth="60">
+							<image>
+								<Image url="@/icons/newFile.png"/>
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button onAction="#loadExistingProject"  prefWidth="80" prefHeight="80">
+					<tooltip>
+						<Tooltip text="Edit existing project"/>
+					</tooltip>
+					<graphic>
+						<ImageView fitHeight="60" fitWidth="60">
+							<image>
+								<Image url="@/icons/openFile.png"/>
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button prefWidth="80" prefHeight="80" onAction="#deleteProject">
+					<tooltip>
+						<Tooltip text="Delete project from your programmer"/>
+					</tooltip>
+					<graphic>
+							<ImageView fitHeight="60" fitWidth="60">
+								<image>
+									<Image url="@/icons/thrash.png"/>
+								</image>
+							</ImageView>
+					</graphic>
+				</Button>
+				<Button onAction="#setEditorLayout"  prefWidth="80" prefHeight="80">
+					<tooltip>
+						<Tooltip text="Edit orders"/>
+					</tooltip>
+					<graphic>
+						<ImageView fitHeight="60" fitWidth="60">
+							<image>
+								<Image url="@/icons/edit.png"/>
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" prefHeight="80" prefWidth="80"
+						onAction="#loadVisualization">
+					<graphic>
+						<ImageView fitHeight="60" fitWidth="60">
+							<Image url="@/icons/start.png"/>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button onAction="#closeApp"  prefWidth="80" prefHeight="80">
+					<tooltip>
+						<Tooltip text="Close application"/>
+					</tooltip>
+					<graphic>
+						<ImageView fitHeight="60" fitWidth="60">
+							<image>
+								<Image url="@/icons/exit.png"/>
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+			</VBox>
+		</HBox>
+	</center>
+
+</BorderPane>

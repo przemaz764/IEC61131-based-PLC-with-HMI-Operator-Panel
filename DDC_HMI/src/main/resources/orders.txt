@@ -1,0 +1,26 @@
+  ORDERS  | CODE | TYPE 
+ APB_RD   |  14  | APB
+ APB_WR   |  30  | APB
+ AND      |  1   | IOM INSTRUCTIONS
+ EQU      |  23  | IOM INSTRUCTIONS
+ F_TRIG   |  6   | IOM INSTRUCTIONS
+ LD       |  0   | IOM INSTRUCTIONS
+ LDN      |  16  | IOM INSTRUCTIONS
+ OR       |  2   | IOM INSTRUCTIONS
+ ORN      |  18  | IOM INSTRUCTIONS
+ R        |  5   | IOM INSTRUCTIONS
+ R_TRIG   |  22  | IOM INSTRUCTIONS
+ S        |  21  | IOM INSTRUCTIONS
+ ST       |  4   | IOM INSTRUCTIONS
+ STN      |  20  | IOM INSTRUCTIONS
+ XOR	  |  3   | IOM INSTRUCTIONS
+ XORN     |  19  | IOM INSTRUCTIONS
+ JMP      |  12  | JUMP CONTROL
+ JMPC     |  13  | JUMP CONTROL
+ JMPCN    |  29  | JUMP CONTROL
+ NOT      |  11  | NAO
+ NOP      |  24  | NAO
+ ANDI     |  8   | OP WITH CONST
+ LDI      |  7   | OP WITH CONST
+ ORI      |  10  | OP WITH CONST
+ XORI     |  7   | OP WITH CONST

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<?import java.util.ArrayList?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.141"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.controllers.ElevatorController">
+   <padding>
+      <Insets bottom="10" left="10" right="10" top="10" />
+   </padding>
+   <top>
+      <HBox alignment="TOP_CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#backToStart">
+               <graphic>
+                  <ImageView>
+                     <Image url="@/icons/back.png"/>
+                  </ImageView>
+               </graphic>
+            </Button>
+         <Button mnemonicParsing="false" onAction="#closeApp">
+            <graphic>
+               <ImageView>
+                  <Image url="@/icons/exit_small.png"/>
+               </ImageView>
+            </graphic>
+         </Button>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <HBox alignment="CENTER" spacing="30">
+         <children>
+            <VBox spacing="30.0">
+               <padding>
+                  <Insets bottom="10" top="10"/>
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" text="5" prefWidth="120" prefHeight="120"
+                           fx:id="floorReq4"/>
+                  <Button mnemonicParsing="false" text="4" prefWidth="120" prefHeight="120"
+                          fx:id="floorReq3"/>
+                  <Button mnemonicParsing="false" text="3" prefWidth="120" prefHeight="120"
+                          fx:id="floorReq2"/>
+                  <Button mnemonicParsing="false" text="2" prefWidth="120" prefHeight="120"
+                          fx:id="floorReq1"/>
+                  <Button mnemonicParsing="false" text="1" prefWidth="120" prefHeight="120"
+                          fx:id="floorReq0"/>
+               </children>
+            </VBox>
+            <VBox spacing="20" alignment="TOP_CENTER">
+               <padding>
+                  <Insets bottom="10" top="10"/>
+               </padding>
+               <children>
+                  <Label fx:id="doorsLabel" text="Doors" />
+                  <Rectangle fx:id="doors" height="100.0"  width="100.0" />
+                   <Label fx:id="moveUpLabel" text="Rotor Up" />
+                  <Rectangle fx:id="moveUp" height="100.0" width="100.0" />
+                   <Label fx:id="moveDownLabel" text="Rotor Down" />
+                  <Rectangle fx:id="moveDown" height="100.0" width="100.0" />
+               </children>
+            </VBox>
+            <AnchorPane>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfd0d0" height="620.0" width="200.0" />
+                  <VBox layoutX="50.0" layoutY="20.0" spacing="20" alignment="CENTER">
+                     <Rectangle fx:id="floor4" arcHeight="20.0" arcWidth="20.0" fill="GREEN" height="100.0" width="100.0" />
+                     <Rectangle fx:id="floor3" arcHeight="20.0" arcWidth="20.0" fill="GREEN" height="100.0" width="100.0" />
+                     <Rectangle fx:id="floor2" arcHeight="20.0" arcWidth="20.0" fill="GREEN" height="100.0" width="100.0" />
+                     <Rectangle fx:id="floor1" arcHeight="20.0" arcWidth="20.0" fill="GREEN" height="100.0" width="100.0" />
+                     <Rectangle fx:id="floor0" arcHeight="20.0" arcWidth="20.0" fill="GREEN" height="100.0" width="100.0" />
+                  </VBox>
+               </children>
+            </AnchorPane>
+         <GridPane vgap="20" hgap="20" alignment="CENTER">
+             <Button mnemonicParsing="false" text="1" prefWidth="120" prefHeight="120"
+                     fx:id="cabinReq0" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+             <Button mnemonicParsing="false" text="STOP" prefWidth="120" prefHeight="120"
+                     fx:id="stop" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+             <Button mnemonicParsing="false" text="2" prefWidth="120" prefHeight="120"
+                     fx:id="cabinReq1" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+             <Button mnemonicParsing="false" text="3" prefWidth="120" prefHeight="120"
+                     fx:id="cabinReq2" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+             <Button mnemonicParsing="false" text="4" prefWidth="120" prefHeight="120"
+                     fx:id="cabinReq3" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+             <Button mnemonicParsing="false" text="5" prefWidth="120" prefHeight="120"
+                     fx:id="cabinReq4" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+         </GridPane>
+      </children>
+      </HBox>
+   </center>
+
+   <fx:define>
+      <ArrayList fx:id="cabinPosition">
+         <fx:reference source="floor0" />
+         <fx:reference source="floor1" />
+         <fx:reference source="floor2" />
+         <fx:reference source="floor3" />
+         <fx:reference source="floor4" />
+      </ArrayList>
+   </fx:define>
+
+   <fx:define>
+      <ArrayList fx:id="floorRequests">
+
+      </ArrayList>
+   </fx:define>
+
+    <fx:define>
+        <ArrayList fx:id="buttons">
+           <fx:reference source="floorReq0" />
+           <fx:reference source="floorReq1" />
+           <fx:reference source="floorReq2" />
+           <fx:reference source="floorReq3" />
+           <fx:reference source="floorReq4" />
+           <fx:reference source="cabinReq0" />
+           <fx:reference source="cabinReq1" />
+           <fx:reference source="cabinReq2" />
+           <fx:reference source="cabinReq3" />
+           <fx:reference source="cabinReq4" />
+        </ArrayList>
+    </fx:define>
+
+   <fx:define>
+      <ArrayList fx:id="controls">
+         <fx:reference source="doors"/>
+         <fx:reference source="moveUp"/>
+         <fx:reference source="moveDown"/>
+      </ArrayList>
+   </fx:define>
+
+   <!--<fx:define>-->
+      <!--<ArrayList fx:id="buttons">-->
+         <!--<fx:reference source="cabinReq0" />-->
+         <!--<fx:reference source="cabinReq1" />-->
+         <!--<fx:reference source="cabinReq2" />-->
+         <!--<fx:reference source="cabinReq3" />-->
+         <!--<fx:reference source="cabinReq4" />-->
+      <!--</ArrayList>-->
+   <!--</fx:define>-->
+
+</BorderPane>

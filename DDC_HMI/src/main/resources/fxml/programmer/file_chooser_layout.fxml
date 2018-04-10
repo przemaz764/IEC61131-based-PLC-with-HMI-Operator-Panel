@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.controllers.FileChooserLayoutController"
+           visible="true" vgap="20" fx:id="choosePane" alignment="TOP_CENTER">
+
+            <padding>
+                <Insets right="5" left="5" top="5" bottom="5"/>
+            </padding>
+            <ButtonBar GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2">
+                <buttons>
+                    <Button text = "Up" onAction="#goUpWithDirectory"/>
+                    <Button text = "Open" onAction="#openButtonHandle"/>
+                    <Button text = "Close" onAction="#closeChoosePane"/>
+                </buttons>
+            </ButtonBar>
+            <Label text="Filename: " GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="filename"/>
+             <Label fx:id="warning" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                    text="Plik o podanej nazwie istnieje. Czy nadpisać?"
+                    visible="false" style="-fx-text-fill: red; -fx-font-weight: bold;" />
+            <Label text="Actual localization: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Label GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                   fx:id="localization" wrapText="true"/>
+            <ListView GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2" fx:id="fileListView"/>
+
+</GridPane>

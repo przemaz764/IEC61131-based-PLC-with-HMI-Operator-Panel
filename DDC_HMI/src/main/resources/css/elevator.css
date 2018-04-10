@@ -1,0 +1,76 @@
+.buttonsActive{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: bolder;
+    -fx-background-color: red;
+    -fx-background-radius: 15 30 15 30;
+    -fx-effect: dropShadow(three-pass-box, #999, 0, 0, 0, 10);
+}
+
+.buttonsInactive{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: bolder;
+    -fx-background-color: grey;
+    -fx-background-radius: 15 30 15 30;
+    -fx-effect: dropShadow(three-pass-box, #999, 0, 0, 0, 10);
+}
+
+.buttonsInactive:pressed{
+    -fx-translate-y: 5;
+    -fx-effect: dropShadow(three-pass-box, #999, 0, 0, 0, 5);
+}
+
+.buttonsActive:pressed{
+    -fx-translate-y: 5;
+    -fx-effect: dropShadow(three-pass-box, #999, 0, 0, 0, 5);
+}
+
+
+#stop{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: bolder;
+    -fx-background-color: red;
+    -fx-background-radius: 30 15 30 15;
+}
+
+.controls{
+    -fx-fill: #dee2e8;
+    -fx-arc-height: 20;
+    -fx-arc-width: 20;
+    -fx-stroke: black;
+}
+
+
+#doorsLabel{
+    -fx-text-fill: #353634;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+#moveUpLabel{
+    -fx-text-fill: #353634;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+#moveDownLabel{
+    -fx-text-fill: #353634;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+#stop{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: bolder;
+    -fx-background-color: red;
+    -fx-background-radius: 30 15 30 15;
+    -fx-effect: dropShadow(three-pass-box, #999, 0, 0, 0, 10);
+}
+
+#stop:pressed{
+    -fx-translate-y: 5;
+    -fx-effect: dropShadow(three-pass-box, #999, 0, 0, 0, 5);
+}
